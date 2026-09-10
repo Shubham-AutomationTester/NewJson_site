@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f6f8fb; color: #1f2937; }
+header { background: #111827; color: white; padding: 24px; }
+main { max-width: 980px; margin: 0 auto; padding: 28px; }
+.card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+nav a { color: #2563eb; margin-right: 16px; text-decoration: none; font-weight: 600; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 10px; overflow-x: auto; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #e0e7ff; color: #3730a3; font-size: 12px; font-weight: 700; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #e5e7eb; padding: 10px; text-align: left; }
+th { background: #f3f4f6; }
+footer { text-align: center; color: #6b7280; padding: 24px; }

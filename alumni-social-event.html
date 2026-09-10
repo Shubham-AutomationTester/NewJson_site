@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alumni Social - Wrapped Event JSON-LD</title>
+  <meta name="description" content="QA page containing a real-world Event JSON-LD block wrapped in CDATA-style JavaScript comments.">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  /*<![CDATA[*/
+  {
+    "@context": "http://schema.org/",
+    "@type": "Event",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "name": "Alumni Social Presented by Noir Hospitality Group",
+    "startDate": "2026-09-18T04:00:00+00:00",
+    "endDate": "2026-09-20T04:00:00+00:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "url": "https://jwu-staging.lwcal.com/event/35105-alumni-social-presented-by-noir-hospitality-group",
+    "description": "Spend the weekend in Charlotte, North Carolina, reconnecting with old friends, reminiscing about cherished memories and making new ones. Whether you attend one event or join the entire weekend, it’s a great opportunity to celebrate and connect with fellow Wildcats.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://jwu-staging.lwcal.com/live/image/gid/13/width/600/height/600/crop/1/src_region/0,0,1961,2048/496_774313460_1379266101014478_8436671143010434526_n_4.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Advancement &amp; Alumni Relations (Johnson &amp; Wales University)",
+      "url": ""
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "eventType",
+        "value": "Alumni &amp; Advancement"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "audience",
+        "value": "Alumni"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "campus",
+        "value": "North Carolina"
+      }
+    ]
+  }
+  /*]]>*/
+  </script>
+</head>
+<body>
+<header>
+  <h1>Alumni Social - Wrapped Event JSON-LD</h1>
+  <p>Real-world Event JSON-LD sample wrapped in CDATA-style comments.</p>
+</header>
+<main>
+  <div class="card">
+    <span class="badge">CDATA JSON-LD</span>
+    <h2>QA scenario</h2>
+    <p>This page contains one <code>Event</code> JSON-LD block wrapped with <code>/*&lt;![CDATA[*/</code> and <code>/*]]&gt;*/</code>. After wrapper normalization, the remaining content is valid JSON.</p>
+  </div>
+
+  <div class="card">
+    <h2>Useful JSON-LD extraction paths</h2>
+    <table>
+      <tr><th>Field</th><th>JSON-LD Path</th><th>Expected value</th></tr>
+      <tr><td>Event name</td><td><code>$.name</code></td><td>Alumni Social Presented by Noir Hospitality Group</td></tr>
+      <tr><td>Start date</td><td><code>$.startDate</code></td><td>2026-09-18T04:00:00+00:00</td></tr>
+      <tr><td>End date</td><td><code>$.endDate</code></td><td>2026-09-20T04:00:00+00:00</td></tr>
+      <tr><td>Attendance mode</td><td><code>$.eventAttendanceMode</code></td><td>https://schema.org/OfflineEventAttendanceMode</td></tr>
+      <tr><td>Event status</td><td><code>$.eventStatus</code></td><td>https://schema.org/EventScheduled</td></tr>
+      <tr><td>Event URL</td><td><code>$.url</code></td><td>JWU staging event URL</td></tr>
+      <tr><td>Image URL</td><td><code>$.image.url</code></td><td>JWU staging image URL</td></tr>
+      <tr><td>Image width</td><td><code>$.image.width</code></td><td>600</td></tr>
+      <tr><td>Image height</td><td><code>$.image.height</code></td><td>600</td></tr>
+      <tr><td>Organizer</td><td><code>$.organizer.name</code></td><td>Advancement &amp;amp; Alumni Relations (Johnson &amp;amp; Wales University)</td></tr>
+      <tr><td>Event type</td><td><code>$.additionalProperty[0].value</code></td><td>Alumni &amp;amp; Advancement</td></tr>
+      <tr><td>Audience</td><td><code>$.additionalProperty[1].value</code></td><td>Alumni</td></tr>
+      <tr><td>Campus</td><td><code>$.additionalProperty[2].value</code></td><td>North Carolina</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Primary crawler check</h2>
+    <p>Configure a JSON-LD field with selector <code>$.name</code>. The expected extracted value is:</p>
+    <pre>Alumni Social Presented by Noir Hospitality Group</pre>
+    <p><a href="index.html">Back to home</a></p>
+  </div>
+</main>
+<footer>Search crawler JSON-LD compatibility demo</footer>
+</body>
+</html>

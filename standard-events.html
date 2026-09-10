@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Standard JSON-LD Events</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Standard Event One",
+    "startDate": "2026-10-01",
+    "isAccessibleForFree": true,
+    "maximumAttendeeCapacity": 200
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Standard Event Two",
+    "startDate": "2026-10-02",
+    "isAccessibleForFree": false,
+    "maximumAttendeeCapacity": 50
+  }
+  </script>
+</head>
+<body>
+<header><h1>Standard JSON-LD Events</h1></header>
+<main>
+  <div class="card">
+    <p>This page contains two normal JSON-LD blocks with no wrappers.</p>
+    <p>Expected values for <code>$.name</code>:</p>
+    <pre>Standard Event One
+Standard Event Two</pre>
+    <p><a href="index.html">Back to home</a></p>
+  </div>
+</main>
+</body>
+</html>

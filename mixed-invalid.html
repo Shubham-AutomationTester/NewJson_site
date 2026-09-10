@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mixed Valid and Invalid JSON-LD</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  /*<![CDATA[*/
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Wrapped Valid Event"
+  }
+  /*]]>*/
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Standard Valid Event"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  /*<![CDATA[*/
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Broken Event",
+    "description": "This block is intentionally invalid because of the trailing comma",
+  }
+  /*]]>*/
+  </script>
+</head>
+<body>
+<header><h1>Mixed Valid and Invalid JSON-LD</h1></header>
+<main>
+  <div class="card">
+    <p>This page contains:</p>
+    <ul>
+      <li>One wrapped valid JSON-LD block</li>
+      <li>One standard valid JSON-LD block</li>
+      <li>One wrapped block that remains invalid after normalization</li>
+    </ul>
+    <p>Expected values for <code>$.name</code>:</p>
+    <pre>Wrapped Valid Event
+Standard Valid Event</pre>
+    <p>The invalid block should be ignored and the crawl should still complete.</p>
+    <p><a href="index.html">Back to home</a></p>
+  </div>
+</main>
+</body>
+</html>

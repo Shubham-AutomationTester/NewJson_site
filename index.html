@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON-LD CDATA Wrapper QA Demo</title>
+  <meta name="description" content="Static QA site for testing wrapped, standard, and invalid JSON-LD extraction.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>JSON-LD CDATA Wrapper QA Demo</h1>
+  <p>Test site for JSON-LD extraction across multiple script blocks.</p>
+</header>
+<main>
+  <div class="card">
+    <span class="badge">QA TEST SITE</span>
+    <h2>Available scenarios</h2>
+    <nav>
+      <a href="wrapped-events.html">Wrapped JSON-LD</a>
+      <a href="standard-events.html">Standard JSON-LD</a>
+      <a href="mixed-invalid.html">Mixed + Invalid JSON-LD</a>
+      <a href="alumni-social-event.html">Alumni Social Event</a>
+    </nav>
+  </div>
+
+  <div class="card">
+    <h2>Recommended crawler field configuration</h2>
+    <table>
+      <tr><th>Setting</th><th>Value</th></tr>
+      <tr><td>Field name</td><td><code>json_ld_names</code></td></tr>
+      <tr><td>Selector type</td><td>JSON-LD</td></tr>
+      <tr><td>Selector</td><td><code>$.name</code></td></tr>
+      <tr><td>Multi-valued</td><td>Yes</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Expected behavior</h2>
+    <p>The crawler should process every <code>&lt;script type="application/ld+json"&gt;</code> block. Supported outer CDATA-style wrappers should be removed before JSON parsing, while content that remains invalid should be ignored without failing the crawl.</p>
+  </div>
+</main>
+<footer>Search crawler JSON-LD compatibility demo</footer>
+</body>
+</html>
